@@ -5,6 +5,7 @@ import com.study.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.sql.DataSource;
 
@@ -27,4 +28,11 @@ public class UserDaoImpl implements UserDao{
 		return jdbcTemplate.queryForObject("select * from user where id = ?",new Object[] { id },new UserMapper());
 	}
 
+	@Override
+	@Transactional
+	public boolean insertUser(User user) {
+		boolean result = jdbcTemplate.update("insert into user (id,name,email) value(?,?,?)",user.getId(),user.getName(),user.getEmail()) > 0;
+		int a = 4/0;
+		return result;
+	}
 }

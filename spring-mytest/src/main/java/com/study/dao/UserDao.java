@@ -9,4 +9,6 @@ import com.study.entity.User;
 public interface UserDao {
 
 	User getById(Integer id);
+
+	boolean insertUser(User user);
 }

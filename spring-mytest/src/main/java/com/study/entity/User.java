@@ -9,10 +9,8 @@ package com.study.entity;
  * @author zhutongtong
  * @date 2022/6/23 15:07
  */
-//@Entity // This tells Hibernate to make a table out of this class
 public class User {
-//	@Id
-//	@GeneratedValue(strategy= GenerationType.AUTO)
+
 	private Integer id;
 
 	private String name;
