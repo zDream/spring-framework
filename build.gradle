@@ -281,12 +281,12 @@ configure(allprojects) { project ->
 			maven { url "https://repo.spring.io/libs-spring-framework-build" }
 		}
 	}
-	configurations.all {
-		resolutionStrategy {
-			cacheChangingModulesFor 0, "seconds"
-			cacheDynamicVersionsFor 0, "seconds"
-		}
-	}
+//	configurations.all {
+//		resolutionStrategy {
+//			cacheChangingModulesFor 0, "seconds"
+//			cacheDynamicVersionsFor 0, "seconds"
+//		}
+//	}
 }
 
 configure([rootProject] + javaProjects) { project ->
