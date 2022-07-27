@@ -1,7 +1,10 @@
+package com.study;
+
 import com.study.config.Config;
 import com.study.dao.UserDao;
 import com.study.entity.Person;
 import com.study.entity.User;
+import com.study.service.UserService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
@@ -23,10 +26,10 @@ public class MyApplication {
 		user.setName("小张");
 		user.setEmail("qq.com");
 		user.setId(4);
-		userDao.insertUser(user);
+//		userDao.insertUser(user);
 
-		System.out.println();
-
+		UserService bean = context.getBean(UserService.class);
+		bean.method();
 	}
 
 

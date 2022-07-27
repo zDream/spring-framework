@@ -3,6 +3,7 @@ package com.study.config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
 import javax.sql.DataSource;
@@ -13,6 +14,7 @@ import javax.sql.DataSource;
  */
 @Configuration
 @ComponentScan("com.study")
+@EnableAspectJAutoProxy
 public class Config {
 
 	private static String url = "jdbc:mysql://localhost:3306/king?allowPublicKeyRetrieval=true&useSSL=false&characterEncoding=utf8&autoReconnect=true&useUnicode=true&useSSL=false&serverTimezone=Asia/Shanghai";

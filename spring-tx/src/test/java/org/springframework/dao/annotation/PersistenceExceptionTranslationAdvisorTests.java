@@ -96,6 +96,7 @@ public class PersistenceExceptionTranslationAdvisorTests {
 
 	@Test
 	public void translationNeededForTheseExceptions() {
+		System.out.println("1234444");
 		doTestTranslationNeededForTheseExceptions(new StereotypedRepositoryInterfaceImpl());
 	}
 

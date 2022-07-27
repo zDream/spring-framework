@@ -29,10 +29,10 @@ public class UserDaoImpl implements UserDao{
 	}
 
 	@Override
-	@Transactional
+//	@Transactional
 	public boolean insertUser(User user) {
 		boolean result = jdbcTemplate.update("insert into user (id,name,email) value(?,?,?)",user.getId(),user.getName(),user.getEmail()) > 0;
-		int a = 4/0;
+//		int a = 4/0;
 		return result;
 	}
 }
