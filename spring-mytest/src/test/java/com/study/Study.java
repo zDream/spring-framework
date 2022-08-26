@@ -1,25 +1,19 @@
 package com.study;
 
 import com.study.config.Config;
-import com.study.dao.UserDao;
 import com.study.entity.Person;
 import com.study.entity.User;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-
-import javax.annotation.Resource;
-import java.awt.*;
-import java.awt.event.InputEvent;
 
 /**
  * @author zhutongtong
  * @date 2022/6/24 18:08
  */
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = Config.class)
+//@RunWith(SpringJUnit4ClassRunner.class)
+//@ContextConfiguration(classes = Config.class)
 public class Study {
 
 //	@Resource
@@ -31,11 +25,11 @@ public class Study {
 	@Test
 	void test2(){
 
-//		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
-//		Person person = context.getBean("person", Person.class);
+		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
+		Person person = context.getBean("person", Person.class);
 
-//		String name = person.getName();
-
+		String name = person.getName();
+		System.out.println(name);
 //		UserDao userDao = context.getBean(UserDao.class);
 //		User byId = userDao.getById(1);
 

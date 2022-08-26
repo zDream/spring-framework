@@ -2,6 +2,9 @@ package com.study;
 
 import com.study.config.Config;
 import com.study.dao.UserDao;
+import com.study.design.strategy.Permission;
+import com.study.design.strategy.PermissionStrategyService;
+import com.study.design.strategy.StrategyContext;
 import com.study.entity.Person;
 import com.study.entity.User;
 import com.study.service.UserService;
@@ -30,6 +33,8 @@ public class MyApplication {
 
 		UserService bean = context.getBean(UserService.class);
 		bean.method();
+
+
 	}
 
 
