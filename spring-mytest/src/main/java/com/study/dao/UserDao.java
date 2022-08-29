@@ -11,4 +11,6 @@ public interface UserDao {
 	User getById(Integer id);
 
 	boolean insertUser(User user);
+
+	boolean insertUserException(User user);
 }

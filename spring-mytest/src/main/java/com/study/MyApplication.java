@@ -25,11 +25,17 @@ public class MyApplication {
 		UserDao userDao = context.getBean(UserDao.class);
 		User byId = userDao.getById(1);
 
-		User user = new User();
-		user.setName("小张");
-		user.setEmail("qq.com");
-		user.setId(4);
+//		User user = new User();
+//		user.setName("小张");
+//		user.setEmail("qq.com");
+//		user.setId(10);
 //		userDao.insertUser(user);
+//
+//		User user1 = new User();
+//		user1.setName("小张");
+//		user1.setEmail("qq.com");
+//		user1.setId(11);
+//		userDao.insertUserException(user1);
 
 		UserService bean = context.getBean(UserService.class);
 		bean.method();
