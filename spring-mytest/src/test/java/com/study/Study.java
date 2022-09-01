@@ -8,6 +8,8 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import java.util.Arrays;
+
 /**
  * @author zhutongtong
  * @date 2022/6/24 18:08
@@ -33,6 +35,7 @@ public class Study {
 //		UserDao userDao = context.getBean(UserDao.class);
 //		User byId = userDao.getById(1);
 
+		//hack
 		User user = new User();
 		user.setName("小张");
 		user.setEmail("qq.com");
