@@ -19,15 +19,15 @@ public class LogAspect {
 	}
 
 
-//	@Before("pointCut()")
-//	public void beforeAdvice(JoinPoint joinPoint){
-//		System.out.println("beforeAdvice");
-//	}
-//
-//	@After("pointCut()")
-//	public void afterAdvice(JoinPoint joinPoint){
-//		System.out.println("afterAdvice");
-//	}
+	@Before("pointCut()")
+	public void beforeAdvice(JoinPoint joinPoint){
+		System.out.println("beforeAdvice");
+	}
+
+	@After("pointCut()")
+	public void afterAdvice(JoinPoint joinPoint){
+		System.out.println("afterAdvice");
+	}
 
 	@Around("pointCut()")
 	public void around(ProceedingJoinPoint joinPoint) throws Throwable{

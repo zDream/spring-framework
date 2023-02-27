@@ -5,16 +5,21 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.sql.DataSource;
 
 /**
+ * 开启事物的注解，只能开启了才生效
+ * @EnableTransactionManagement
+ *
  * @author zhutongtong
  * @date 2022/6/23 18:47
  */
 @Configuration
 @ComponentScan("com.study")
 @EnableAspectJAutoProxy
+@EnableTransactionManagement
 public class Config {
 
 	private static String url = "jdbc:mysql://localhost:3306/king?allowPublicKeyRetrieval=true&useSSL=false&characterEncoding=utf8&autoReconnect=true&useUnicode=true&useSSL=false&serverTimezone=Asia/Shanghai";
