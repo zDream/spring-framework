@@ -30,7 +30,7 @@ public class MyApplication {
 		user.setName("小张");
 		user.setEmail("qq.com");
 		user.setId(100);
-		userDao.insertUser(user);
+//		userDao.insertUser(user);
 //
 //		User user1 = new User();
 //		user1.setName("小张");
